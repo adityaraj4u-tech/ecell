@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1120"/>
+      <stop offset="100%" style="stop-color:#111A2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="60" y="60" width="1080" height="510" rx="24" fill="none" stroke="#6366F1" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="120" y="280" font-family="system-ui,sans-serif" font-size="56" font-weight="700" fill="#F8FAFC">GEC Banka E-Cell</text>
+  <text x="120" y="350" font-family="system-ui,sans-serif" font-size="28" fill="#94A3B8">Empowering Innovation, Executing Ambition</text>
+  <text x="120" y="420" font-family="system-ui,sans-serif" font-size="20" fill="#3B82F6">Placeholder OG image — replace with /public/og-image.png (1200×630)</text>
+</svg>
