@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss";
 
+// Lets opacity modifiers (e.g. bg-surface/80) work with CSS-variable colors
+const withAlpha = (variable: string) =>
+  `color-mix(in srgb, var(${variable}) calc(<alpha-value> * 100%), transparent)`;
+
 const config: Config = {
   darkMode: "class",
   content: [
@@ -10,15 +14,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        surface: "var(--surface)",
-        border: "var(--border)",
-        foreground: "var(--foreground)",
-        muted: "var(--muted)",
+        background: withAlpha("--background"),
+        surface: withAlpha("--surface"),
+        border: withAlpha("--border"),
+        foreground: withAlpha("--foreground"),
+        muted: withAlpha("--muted"),
         accent: {
-          DEFAULT: "var(--accent)",
-          indigo: "var(--accent-indigo)",
-          cyan: "var(--accent-cyan)",
+          DEFAULT: withAlpha("--accent"),
+          indigo: withAlpha("--accent-indigo"),
+          cyan: withAlpha("--accent-cyan"),
         },
       },
       borderRadius: {
@@ -32,8 +36,8 @@ const config: Config = {
         "glow-sm": "var(--shadow-glow-sm)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-plus-jakarta)", "system-ui", "sans-serif"],
+        sans: [withAlpha("--font-inter"), "system-ui", "sans-serif"],
+        heading: [withAlpha("--font-plus-jakarta"), "system-ui", "sans-serif"],
       },
       fontSize: {
         "fluid-xs": "clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)",
