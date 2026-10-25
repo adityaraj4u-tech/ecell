@@ -1,0 +1,14 @@
+{
+  "name": "ecell",
+  "private": true,
+  "workspaces": [
+    "ecell/ecell-gec-banka-source"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace ecell-gec-banka",
+    "build": "npm run build --workspace ecell-gec-banka",
+    "start": "npm run start --workspace ecell-gec-banka",
+    "lint": "npm run lint --workspace ecell-gec-banka",
+    "typecheck": "npm run typecheck --workspace ecell-gec-banka"
+  }
+}
